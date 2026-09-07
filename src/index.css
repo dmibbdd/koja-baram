@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --color-sand: #E6DDCB;
+  --color-sand-light: #F5F1E9;
+  --color-forest: #23412F;
+  --color-forest-dark: #182D1F;
+  --color-forest-muted: #4A6741;
+  --color-navy: #1D2E44;
+  --color-navy-dark: #131F2E;
+  --color-charcoal: #3A3A38;
+  --color-tan: #C8B99A;
+  --color-tan-light: #DDD4C0;
+  --color-offblack: #1A1A18;
+  --color-moss: #7A9E6B;
+  --color-amber: #C87941;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-serif: 'Arvo', Georgia, serif;
+  --font-mono: 'Space Mono', 'Courier New', monospace;
+  --radius-sm: 4px;
+  --radius-md: 4px;
+  --radius-lg: 6px;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background-color: #E6DDCB;
+  color: #3A3A38;
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #C8B99A transparent;
+}
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #C8B99A; border-radius: 3px; }
+
+/* RTL support */
+[dir="rtl"] { font-family: 'Inter', 'Vazirmatn', system-ui, sans-serif; }
+
+/* Topographic contour SVG background */
+.topo-bg {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600' viewBox='0 0 600 600'%3E%3Cg fill='none' stroke='%23C8B99A' stroke-width='0.8' opacity='0.5'%3E%3Cellipse cx='300' cy='300' rx='280' ry='200'/%3E%3Cellipse cx='300' cy='300' rx='230' ry='155'/%3E%3Cellipse cx='300' cy='300' rx='180' ry='115'/%3E%3Cellipse cx='300' cy='300' rx='130' ry='80'/%3E%3Cellipse cx='300' cy='300' rx='80' ry='50'/%3E%3Cellipse cx='300' cy='300' rx='40' ry='25'/%3E%3Cpath d='M20 300 Q150 250 300 280 Q450 310 580 290' /%3E%3Cpath d='M20 340 Q150 290 300 320 Q450 350 580 330' /%3E%3Cpath d='M20 380 Q150 330 300 360 Q450 390 580 370' /%3E%3Cpath d='M20 260 Q150 210 300 240 Q450 270 580 250' /%3E%3Cpath d='M20 220 Q150 170 300 200 Q450 230 580 210' /%3E%3C/g%3E%3C/svg%3E");
+  background-size: 600px 600px;
+}
+
+/* Coordinate label style */
+.coord-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  color: #4A6741;
+}
+
+/* Utility classes */
+.font-serif { font-family: 'Arvo', Georgia, serif; }
+.font-mono { font-family: 'Space Mono', monospace; }
+
+/* Card module */
+.field-card {
+  background: #F5F1E9;
+  border: 1px solid #C8B99A;
+  border-radius: 4px;
+}
+
+/* Transitions */
+* { transition-property: color, background-color, border-color, opacity, transform; transition-duration: 150ms; }
+
+/* Focus rings */
+:focus-visible { outline: 2px solid #23412F; outline-offset: 2px; }
+
+/* Hide scrollbar while keeping scroll */
+.scrollbar-hidden { scrollbar-width: none; }
+.scrollbar-hidden::-webkit-scrollbar { display: none; }

@@ -1,0 +1,6 @@
+```text
+User-agent: *
+Allow: /
+
+Sitemap: https://koja-baram.jfry4807.workers.dev/sitemap.xml
+```

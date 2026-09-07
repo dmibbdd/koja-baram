@@ -367,14 +367,14 @@ export const cities: Record<string, City> = {
       attractions['notre-dame'],
     ],
     restaurants: [
-      { id: 'r1', name: 'Le Comptoir du Relais', nameFa: 'لو کمپتوار دو رله', cuisine: 'French Bistro', priceRange: '€€€', rating: 4.6, description: 'Legendary Saint-Germain bistro with classic French cuisine.', imageUrl: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&h=400&fit=crop' },
-      { id: 'r2', name: 'Septime', nameFa: 'سپتیم', cuisine: 'Modern French', priceRange: '€€€€', rating: 4.9, description: 'One of Paris\'s most celebrated modern bistros, reservation essential.', imageUrl: 'https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=600&h=400&fit=crop' },
-      { id: 'r3', name: 'L\'As du Fallafel', nameFa: 'لاس دو فلافل', cuisine: 'Middle Eastern', priceRange: '€', rating: 4.5, description: 'Iconic falafel spot in the Marais, beloved since 1979.', imageUrl: 'https://images.unsplash.com/photo-1561651823-34feb02250e4?w=600&h=400&fit=crop' },
+      { id: 'r1', name: 'Le Comptoir du Relais', nameFa: 'لو کمپتوار دو رله', cuisine: 'French Bistro', priceRange: '€€€', rating: 4.6, description: 'Legendary Saint-Germain bistro with classic French cuisine.', imageUrl: '/site-img/paris/lo-mousam.jpg' },
+      { id: 'r2', name: 'Septime', nameFa: 'سپتیم', cuisine: 'Modern French', priceRange: '€€€€', rating: 4.9, description: 'One of Paris\'s most celebrated modern bistros, reservation essential.', imageUrl: '/site-img/paris/Septime.jpg' },
+      { id: 'r3', name: 'L\'As du Fallafel', nameFa: 'لاس دو فلافل', cuisine: 'Middle Eastern', priceRange: '€', rating: 4.5, description: 'Iconic falafel spot in the Marais, beloved since 1979.', imageUrl: '/site-img/paris/LAs_du_Fallafel.jpg' },
     ],
     neighborhoods: [
-      { id: 'n1', name: 'Le Marais', nameFa: 'لو مره', description: 'Trendy historic district with museums, galleries, and LGBTQ+ scene.', descriptionFa: 'محله تاریخی و پرطرفدار با موزه‌ها و گالری‌ها.', imageUrl: 'https://images.unsplash.com/photo-1580133318324-f2f76d987dd8?w=600&h=400&fit=crop', vibe: 'Art & Culture' },
-      { id: 'n2', name: 'Montmartre', nameFa: 'مونمارتر', description: 'Hilltop village known for the Sacré-Cœur and bohemian artists.', descriptionFa: 'روستای تپه‌ای معروف به کلیسای ساکره‌کور و هنرمندان بوهمی.', imageUrl: 'https://images.unsplash.com/photo-1551887373-3c5bd224f6e2?w=600&h=400&fit=crop', vibe: 'Bohemian' },
-      { id: 'n3', name: 'Saint-Germain', nameFa: 'سن ژرمن', description: 'Sophisticated Left Bank neighborhood with cafes and bookshops.', descriptionFa: 'محله پیشرفته ساحل چپ با کافه‌ها و کتابفروشی‌ها.', imageUrl: 'https://images.unsplash.com/photo-1522093007474-d86e9bf7ba6f?w=600&h=400&fit=crop', vibe: 'Literary & Chic' },
+      { id: 'n1', name: 'Le Marais', nameFa: 'لو مره', description: 'Trendy historic district with museums, galleries, and LGBTQ+ scene.', descriptionFa: 'محله تاریخی و پرطرفدار با موزه‌ها و گالری‌ها.', imageUrl: '/site-img/paris/Le-Marais.jpg', vibe: 'Art & Culture' },
+      { id: 'n2', name: 'Montmartre', nameFa: 'مونمارتر', description: 'Hilltop village known for the Sacré-Cœur and bohemian artists.', descriptionFa: 'روستای تپه‌ای معروف به کلیسای ساکره‌کور و هنرمندان بوهمی.', imageUrl: '/site-img/paris/Montmartre.jpg', vibe: 'Bohemian' },
+      { id: 'n3', name: 'Saint-Germain', nameFa: 'سن ژرمن', description: 'Sophisticated Left Bank neighborhood with cafes and bookshops.', descriptionFa: 'محله پیشرفته ساحل چپ با کافه‌ها و کتابفروشی‌ها.', imageUrl: '/site-img/paris/Saint-Germain.jpg', vibe: 'Literary & Chic' },
     ],
     travelTips: ['Book Eiffel Tower tickets weeks in advance', 'Get a Navigo Découverte for unlimited metro travel', 'Most museums free on first Sunday of month', 'Tipping 5-10% is appreciated but not required'],
     travelTipsFa: ['بلیط برج ایفل را هفته‌ها قبل رزرو کنید', 'کارت ناویگو برای سفرهای نامحدود مترو بگیرید', 'اکثر موزه‌ها اولین یکشنبه ماه رایگان هستند'],
@@ -415,14 +415,14 @@ export const cities: Record<string, City> = {
       attractions['mt-fuji'],
     ],
     restaurants: [
-      { id: 'r4', name: 'Sukiyabashi Jiro', nameFa: 'سوکیابشی جیرو', cuisine: 'Sushi', priceRange: '€€€€€', rating: 5.0, description: 'Three-Michelin-star sushi restaurant, subject of the film Jiro Dreams of Sushi.', imageUrl: 'https://images.unsplash.com/photo-1617196034183-421b4040ed20?w=600&h=400&fit=crop' },
-      { id: 'r5', name: 'Ichiran Ramen', nameFa: 'ایچیران رامن', cuisine: 'Ramen', priceRange: '€€', rating: 4.5, description: 'Solo ramen dining booths for the ultimate focused ramen experience.', imageUrl: 'https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=600&h=400&fit=crop' },
-      { id: 'r6', name: 'Narisawa', nameFa: 'ناریساوا', cuisine: 'Innovative Japanese', priceRange: '€€€€€', rating: 4.9, description: 'Avant-garde cuisine celebrating Japanese nature and ingredients.', imageUrl: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&h=400&fit=crop' },
+      { id: 'r4', name: 'Sukiyabashi Jiro', nameFa: 'سوکیابشی جیرو', cuisine: 'Sushi', priceRange: '€€€€€', rating: 5.0, description: 'Three-Michelin-star sushi restaurant, subject of the film Jiro Dreams of Sushi.', imageUrl: '/site-img/japan/Sukiyabashi Jiro.jpg' },
+      { id: 'r5', name: 'Ichiran Ramen', nameFa: 'ایچیران رامن', cuisine: 'Ramen', priceRange: '€€', rating: 4.5, description: 'Solo ramen dining booths for the ultimate focused ramen experience.', imageUrl: '/site-img/japan/Ichiran Ramen.jpg' },
+      { id: 'r6', name: 'Narisawa', nameFa: 'ناریساوا', cuisine: 'Innovative Japanese', priceRange: '€€€€€', rating: 4.9, description: 'Avant-garde cuisine celebrating Japanese nature and ingredients.', imageUrl: '/site-img/japan/Narisawa.jpg' },
     ],
     neighborhoods: [
-      { id: 'n4', name: 'Shinjuku', nameFa: 'شینجوکو', description: 'Entertainment and business hub with the world\'s busiest railway station.', descriptionFa: 'مرکز سرگرمی و تجاری با شلوغ‌ترین ایستگاه قطار جهان.', imageUrl: 'https://images.unsplash.com/photo-1503899036084-c55cdd92da26?w=600&h=400&fit=crop', vibe: 'Electric & Urban' },
-      { id: 'n5', name: 'Asakusa', nameFa: 'آساکوسا', description: 'Tokyo\'s traditional downtown with Senso-ji Temple and artisan shops.', descriptionFa: 'محله سنتی توکیو با معبد سنسوجی و مغازه‌های صنایع دستی.', imageUrl: 'https://images.unsplash.com/photo-1570459027562-4a916cc6113f?w=600&h=400&fit=crop', vibe: 'Historic & Traditional' },
-      { id: 'n6', name: 'Shibuya', nameFa: 'شیبویا', description: 'Youth fashion and pop culture epicenter with the famous crossing.', descriptionFa: 'مرکز مد جوانان و فرهنگ پاپ با تقاطع معروف.', imageUrl: 'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=600&h=400&fit=crop', vibe: 'Trendy & Youthful' },
+      { id: 'n4', name: 'Shinjuku', nameFa: 'شینجوکو', description: 'Entertainment and business hub with the world\'s busiest railway station.', descriptionFa: 'مرکز سرگرمی و تجاری با شلوغ‌ترین ایستگاه قطار جهان.', imageUrl: '/site-img/japan/Shinjuku.jpg', vibe: 'Electric & Urban' },
+      { id: 'n5', name: 'Asakusa', nameFa: 'آساکوسا', description: 'Tokyo\'s traditional downtown with Senso-ji Temple and artisan shops.', descriptionFa: 'محله سنتی توکیو با معبد سنسوجی و مغازه‌های صنایع دستی.', imageUrl: '/site-img/japan/Asakusa.jpg', vibe: 'Historic & Traditional' },
+      { id: 'n6', name: 'Shibuya', nameFa: 'شیبویا', description: 'Youth fashion and pop culture epicenter with the famous crossing.', descriptionFa: 'مرکز مد جوانان و فرهنگ پاپ با تقاطع معروف.', imageUrl: '/site-img/japan/Shibuya.jpg', vibe: 'Trendy & Youthful' },
     ],
     travelTips: ['Get a Suica/Pasmo IC card for seamless public transport', 'Carry cash — many small restaurants don\'t accept cards', 'Shoes that slip on/off easily for temples', 'Book popular restaurants months in advance'],
     travelTipsFa: ['کارت IC سوییکا یا پاسمو برای حمل‌ونقل عمومی بگیرید', 'نقد همراه داشته باشید - بسیاری از رستوران‌های کوچک کارت نمی‌پذیرند'],
@@ -462,13 +462,13 @@ export const cities: Record<string, City> = {
       attractions['grand-bazaar'],
     ],
     restaurants: [
-      { id: 'r7', name: 'Karaköy Lokantası', nameFa: 'کاراکوی لوکانتاسی', cuisine: 'Turkish Meyhane', priceRange: '€€€', rating: 4.7, description: 'Refined meyhane dishes in the hip Karaköy district.', imageUrl: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&h=400&fit=crop' },
-      { id: 'r8', name: 'Çiya Sofrası', nameFa: 'چییا سوفراسی', cuisine: 'Anatolian', priceRange: '€€', rating: 4.8, description: 'Legendary Kadıköy restaurant celebrating Anatolian culinary heritage.', imageUrl: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&h=400&fit=crop' },
+      { id: 'r7', name: 'Karaköy Lokantası', nameFa: 'کاراکوی لوکانتاسی', cuisine: 'Turkish Meyhane', priceRange: '€€€', rating: 4.7, description: 'Refined meyhane dishes in the hip Karaköy district.', imageUrl: '/site-img/turkis/Karaköy Lokantası.jpg' },
+      { id: 'r8', name: 'Çiya Sofrası', nameFa: 'چییا سوفراسی', cuisine: 'Anatolian', priceRange: '€€', rating: 4.8, description: 'Legendary Kadıköy restaurant celebrating Anatolian culinary heritage.', imageUrl: '/site-img/turkis/Çiya Sofrası.jpg' },
     ],
     neighborhoods: [
-      { id: 'n7', name: 'Sultanahmet', nameFa: 'سلطان احمد', description: 'Historic heart of Istanbul with the Grand Bazaar, Hagia Sophia and Blue Mosque.', descriptionFa: 'قلب تاریخی استانبول با بازار بزرگ، ایاصوفیه و مسجد آبی.', imageUrl: 'https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=600&h=400&fit=crop', vibe: 'Historic & Touristic' },
-      { id: 'n8', name: 'Beyoğlu', nameFa: 'بیوغلو', description: 'Modern, cosmopolitan area with İstiklal Avenue, bars and galleries.', descriptionFa: 'منطقه مدرن و جهان‌وطن با خیابان استقلال، بارها و گالری‌ها.', imageUrl: 'https://images.unsplash.com/photo-1597933185990-a38e372cf56a?w=600&h=400&fit=crop', vibe: 'Cosmopolitan' },
-      { id: 'n9', name: 'Karaköy', nameFa: 'کاراکوی', description: 'Trendy port neighborhood with a thriving café and restaurant scene.', descriptionFa: 'محله بندری پرطرفدار با صحنه کافه و رستوران پررونق.', imageUrl: 'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=600&h=400&fit=crop', vibe: 'Hip & Creative' },
+      { id: 'n7', name: 'Sultanahmet', nameFa: 'سلطان احمد', description: 'Historic heart of Istanbul with the Grand Bazaar, Hagia Sophia and Blue Mosque.', descriptionFa: 'قلب تاریخی استانبول با بازار بزرگ، ایاصوفیه و مسجد آبی.', imageUrl: '/site-img/turkis/Sultanahme.jpg', vibe: 'Historic & Touristic' },
+      { id: 'n8', name: 'Beyoğlu', nameFa: 'بیوغلو', description: 'Modern, cosmopolitan area with İstiklal Avenue, bars and galleries.', descriptionFa: 'منطقه مدرن و جهان‌وطن با خیابان استقلال، بارها و گالری‌ها.', imageUrl: '/site-img/turkis/Beyoğlu.jpg', vibe: 'Cosmopolitan' },
+      { id: 'n9', name: 'Karaköy', nameFa: 'کاراکوی', description: 'Trendy port neighborhood with a thriving café and restaurant scene.', descriptionFa: 'محله بندری پرطرفدار با صحنه کافه و رستوران پررونق.', imageUrl: '/site-img/turkis/Karaköy.jpg', vibe: 'Hip & Creative' },
     ],
     travelTips: ['Get an İstanbulkart for public transport', 'Haggling is expected in the Grand Bazaar', 'Evening ferry on the Bosphorus is essential', 'Dress modestly when visiting mosques'],
     travelTipsFa: ['کارت استانبول برای حمل‌ونقل عمومی بگیرید', 'در بازار بزرگ چانه‌زنی مرسوم است'],
@@ -504,12 +504,12 @@ export const cities: Record<string, City> = {
     transportationFa: 'مترو لندن (Tube)، اتوبوس، دوچرخه اشتراکی، تاکسی',
     attractions: [attractions['tower-of-london']],
     restaurants: [
-      { id: 'r9', name: 'Dishoom', nameFa: 'دیشوم', cuisine: 'Bombay Cafe', priceRange: '€€€', rating: 4.8, description: 'Iconic Bombay-style cafe serving Indian breakfast, lunch, and dinner.', imageUrl: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=600&h=400&fit=crop' },
-      { id: 'r10', name: 'St. John Restaurant', nameFa: 'رستوران سنت جان', cuisine: 'British', priceRange: '€€€€', rating: 4.7, description: 'Pioneering British restaurant known for its nose-to-tail cooking philosophy.', imageUrl: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&h=400&fit=crop' },
+      { id: 'r9', name: 'Dishoom', nameFa: 'دیشوم', cuisine: 'Bombay Cafe', priceRange: '€€€', rating: 4.8, description: 'Iconic Bombay-style cafe serving Indian breakfast, lunch, and dinner.', imageUrl: '/site-img/britis/Dishoom.jpg' },
+      { id: 'r10', name: 'St. John Restaurant', nameFa: 'رستوران سنت جان', cuisine: 'British', priceRange: '€€€€', rating: 4.7, description: 'Pioneering British restaurant known for its nose-to-tail cooking philosophy.', imageUrl: 'site-img/britis/St. John Restaurant.jpg' },
     ],
     neighborhoods: [
-      { id: 'n10', name: 'Shoreditch', nameFa: 'شوردیچ', description: 'London\'s creative hub with street art, galleries and tech startups.', descriptionFa: 'مرکز خلاق لندن با هنر خیابانی، گالری‌ها و استارتاپ‌های تکنولوژی.', imageUrl: 'https://images.unsplash.com/photo-1520986606214-8b456906c813?w=600&h=400&fit=crop', vibe: 'Creative & Hip' },
-      { id: 'n11', name: 'Notting Hill', nameFa: 'ناتینگ هیل', description: 'Charming area with pastel-coloured houses and the famous Portobello Market.', descriptionFa: 'منطقه‌ای دلنشین با خانه‌های رنگ پاستل و بازار معروف پورتوبلو.', imageUrl: 'https://images.unsplash.com/photo-1529655683826-aba9b3e77383?w=600&h=400&fit=crop', vibe: 'Charming & Upscale' },
+      { id: 'n10', name: 'Shoreditch', nameFa: 'شوردیچ', description: 'London\'s creative hub with street art, galleries and tech startups.', descriptionFa: 'مرکز خلاق لندن با هنر خیابانی، گالری‌ها و استارتاپ‌های تکنولوژی.', imageUrl: '/site-img/britis/Shoreditch.jpg', vibe: 'Creative & Hip' },
+      { id: 'n11', name: 'Notting Hill', nameFa: 'ناتینگ هیل', description: 'Charming area with pastel-coloured houses and the famous Portobello Market.', descriptionFa: 'منطقه‌ای دلنشین با خانه‌های رنگ پاستل و بازار معروف پورتوبلو.', imageUrl: '/site-img/britis/Notting Hill.jpg', vibe: 'Charming & Upscale' },
     ],
     travelTips: ['Get an Oyster card for all public transport', 'Most museums and galleries are free', 'Congestion charge applies in central London for cars', 'Queuing is taken seriously — always wait in line'],
     travelTipsFa: ['کارت اویستر برای همه حمل‌ونقل عمومی بگیرید', 'اکثر موزه‌ها و گالری‌ها رایگان هستند'],
@@ -544,10 +544,10 @@ export const cities: Record<string, City> = {
     transportationFa: 'مترو، تراموا، اتوبوس، تاکسی',
     attractions: [attractions['burj-khalifa']],
     restaurants: [
-      { id: 'r11', name: 'Nobu Dubai', nameFa: 'نوبو دبی', cuisine: 'Japanese-Peruvian', priceRange: '€€€€€', rating: 4.7, description: 'Celebrity chef Nobu Matsuhisa\'s iconic fusion restaurant in Atlantis.', imageUrl: 'https://images.unsplash.com/photo-1617196034183-421b4040ed20?w=600&h=400&fit=crop' },
+      { id: 'r11', name: 'Nobu Dubai', nameFa: 'نوبو دبی', cuisine: 'Japanese-Peruvian', priceRange: '€€€€€', rating: 4.7, description: 'Celebrity chef Nobu Matsuhisa\'s iconic fusion restaurant in Atlantis.', imageUrl: '/site-img/duby/Nobu Dubai.jpg' },
     ],
     neighborhoods: [
-      { id: 'n12', name: 'Downtown Dubai', nameFa: 'داون‌تاون دبی', description: 'Home to the Burj Khalifa, Dubai Mall and Dubai Fountain.', descriptionFa: 'خانه برج خلیفه، مرکز خرید دبی و فواره دبی.', imageUrl: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&h=400&fit=crop', vibe: 'Luxury & Iconic' },
+      { id: 'n12', name: 'Downtown Dubai', nameFa: 'داون‌تاون دبی', description: 'Home to the Burj Khalifa, Dubai Mall and Dubai Fountain.', descriptionFa: 'خانه برج خلیفه، مرکز خرید دبی و فواره دبی.', imageUrl: 'site-img/duby/Downtown Dubai.jpg', vibe: 'Luxury & Iconic' },
     ],
     travelTips: ['Ramadan schedules affect restaurants and hours', 'Dress modestly outside hotel/beach areas', 'Tap water is safe but bottled is preferred', 'Uber is reliable and cheaper than taxis'],
     travelTipsFa: ['ساعات ماه رمضان بر رستوران‌ها تأثیر می‌گذارد', 'خارج از هتل و ساحل با احتیاط لباس بپوشید'],
@@ -582,10 +582,10 @@ export const cities: Record<string, City> = {
     transportationFa: 'مترو (۲۴ ساعته)، اتوبوس، تاکسی زرد، دوچرخه اشتراکی',
     attractions: [attractions['central-park']],
     restaurants: [
-      { id: 'r12', name: 'Katz\'s Delicatessen', nameFa: 'کاتز دلیکاتسن', cuisine: 'Jewish Deli', priceRange: '€€', rating: 4.5, description: 'Iconic Lower East Side deli open since 1888, famous pastrami sandwiches.', imageUrl: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&h=400&fit=crop' },
+      { id: 'r12', name: 'Katzs Delicatessen', nameFa: 'کاتز دلیکاتسن', cuisine: 'Jewish Deli', priceRange: '€€', rating: 4.5, description: 'Iconic Lower East Side deli open since 1888, famous pastrami sandwiches.', imageUrl: '/site-img/amirecan/Katzs Delicatessen.jpg' },
     ],
     neighborhoods: [
-      { id: 'n13', name: 'SoHo', nameFa: 'سوهو', description: 'Trendy downtown area with cast-iron architecture, boutiques and galleries.', descriptionFa: 'منطقه پرطرفدار با معماری چدنی، بوتیک‌ها و گالری‌ها.', imageUrl: 'https://images.unsplash.com/photo-1545224144-b38cd309ef69?w=600&h=400&fit=crop', vibe: 'Fashionable & Artistic' },
+      { id: 'n13', name: 'SoHo', nameFa: 'سوهو', description: 'Trendy downtown area with cast-iron architecture, boutiques and galleries.', descriptionFa: 'منطقه پرطرفدار با معماری چدنی، بوتیک‌ها و گالری‌ها.', imageUrl: '/site-img/amirecan/SoHo.jpg', vibe: 'Fashionable & Artistic' },
     ],
     travelTips: ['MetroCard or OMNY for subway and bus', 'Walking is often faster than taxis in Midtown', 'Tipping 20% is standard', 'Book Broadway shows in advance'],
     travelTipsFa: ['کارت مترو برای مترو و اتوبوس', 'انعام ۲۰٪ در رستوران‌ها معمول است'],
@@ -620,10 +620,10 @@ export const cities: Record<string, City> = {
     transportationFa: 'مترو، اتوبوس، تراموا، تاکسی',
     attractions: [attractions['colosseum']],
     restaurants: [
-      { id: 'r13', name: 'Roscioli', nameFa: 'روشیولی', cuisine: 'Roman Trattoria', priceRange: '€€€€', rating: 4.8, description: 'Celebrated deli-restaurant serving classic Roman pasta and charcuterie.', imageUrl: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&h=400&fit=crop' },
+      { id: 'r13', name: 'Roscioli', nameFa: 'روشیولی', cuisine: 'Roman Trattoria', priceRange: '€€€€', rating: 4.8, description: 'Celebrated deli-restaurant serving classic Roman pasta and charcuterie.', imageUrl: '/site-img/itly/Roscioli.jpg' },
     ],
     neighborhoods: [
-      { id: 'n14', name: 'Trastevere', nameFa: 'تراستوره', description: 'Charming medieval neighborhood with cobblestone streets and great restaurants.', descriptionFa: 'محله قرون وسطایی با کوچه‌های سنگفرش و رستوران‌های عالی.', imageUrl: 'https://images.unsplash.com/photo-1601999109332-542b18dbf947?w=600&h=400&fit=crop', vibe: 'Medieval & Romantic' },
+      { id: 'n14', name: 'Trastevere', nameFa: 'تراستوره', description: 'Charming medieval neighborhood with cobblestone streets and great restaurants.', descriptionFa: 'محله قرون وسطایی با کوچه‌های سنگفرش و رستوران‌های عالی.', imageUrl: '/site-img/itly/Trastevere.jpg', vibe: 'Medieval & Romantic' },
     ],
     travelTips: ['Book Colosseum tickets far in advance', 'Carry coins for water fountains (nasoni) — free and drinkable', 'Beware of tourist traps near major monuments', 'Siesta hours (14:00–16:00) close many shops'],
     travelTipsFa: ['بلیط کولوسئوم را از پیش رزرو کنید', 'مراقب تله‌های توریستی نزدیک بناهای تاریخی باشید'],
@@ -658,11 +658,11 @@ export const cities: Record<string, City> = {
     transportationFa: 'مترو، اتوبوس، تراموا، دوچرخه',
     attractions: [attractions['sagrada-familia']],
     restaurants: [
-      { id: 'r14', name: 'Bar Cañete', nameFa: 'بار کانیته', cuisine: 'Catalan Tapas', priceRange: '€€€', rating: 4.7, description: 'Elegant tapas bar serving superb Catalan cuisine in the Gothic Quarter.', imageUrl: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&h=400&fit=crop' },
+      { id: 'r14', name: 'Bar Cañete', nameFa: 'بار کانیته', cuisine: 'Catalan Tapas', priceRange: '€€€', rating: 4.7, description: 'Elegant tapas bar serving superb Catalan cuisine in the Gothic Quarter.', imageUrl: '/site-img/spian/Bar Cañete.jpg' },
     ],
     neighborhoods: [
-      { id: 'n15', name: 'Gothic Quarter', nameFa: 'محله گوتیک', description: 'Medieval labyrinthine streets at the heart of Barcelona\'s old city.', descriptionFa: 'کوچه‌های پیچ‌درپیچ قرون وسطایی در قلب شهر قدیمی بارسلونا.', imageUrl: 'https://images.unsplash.com/photo-1464790719320-516ecd75af6c?w=600&h=400&fit=crop', vibe: 'Historic & Atmospheric' },
-      { id: 'n16', name: 'Eixample', nameFa: 'اکزامپله', description: 'Modernist grid district housing most of Barcelona\'s Gaudí buildings.', descriptionFa: 'منطقه شبکه مدرنیستی که اکثر ساختمان‌های گائودی در آن قرار دارند.', imageUrl: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&h=400&fit=crop', vibe: 'Modernist & Elegant' },
+      { id: 'n15', name: 'Gothic Quarter', nameFa: 'محله گوتیک', description: 'Medieval labyrinthine streets at the heart of Barcelona\'s old city.', descriptionFa: 'کوچه‌های پیچ‌درپیچ قرون وسطایی در قلب شهر قدیمی بارسلونا.', imageUrl: '/site-img/spian/Gothic Quarter.jpg', vibe: 'Historic & Atmospheric' },
+      { id: 'n16', name: 'Eixample', nameFa: 'اکزامپله', description: 'Modernist grid district housing most of Barcelona\'s Gaudí buildings.', descriptionFa: 'منطقه شبکه مدرنیستی که اکثر ساختمان‌های گائودی در آن قرار دارند.', imageUrl: '/site-img/spian/Eixample.jpg', vibe: 'Modernist & Elegant' },
     ],
     travelTips: ['T-Casual 10-trip metro card is best value', 'Pickpockets are very active on La Rambla', 'Lunch (14:00–16:00) is the main meal', 'Book Sagrada Família months in advance'],
     travelTipsFa: ['کارت مترو ۱۰ سفره بهترین ارزش است', 'در لا رامبلا مراقب جیب‌بر باشید'],
@@ -795,6 +795,7 @@ export const trendingDestinations = [
   { city: cities.barcelona, rank: 4, trend: '+8%' },
   { city: cities['new-york'], rank: 5, trend: '+5%' },
   { city: cities.dubai, rank: 6, trend: '+22%' },
+  { city: cities.tehran, rank: 7, trend: '+18%' },
 ];
 
 export const allCitiesList = Object.values(cities);

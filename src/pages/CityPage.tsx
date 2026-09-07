@@ -20,6 +20,82 @@ export default function CityPage() {
 
   const city = citySlug ? cities[citySlug] : undefined;
 
+  /*
+   * Dynamic SEO
+   * Runs before the conditional 404 return so the Hook order
+   * stays consistent across renders.
+   */
+  useEffect(() => {
+    if (!city || city.countrySlug !== countrySlug) return;
+
+    const cityName = lang === 'fa' ? city.nameFa : city.name;
+    const countryName = lang === 'fa' ? city.countryFa : city.country;
+
+    const title =
+      lang === 'fa'
+        ? `${cityName} | راهنمای سفر، جاهای دیدنی و جاذبه‌های گردشگری`
+        : `${cityName} Travel Guide | Things to Do & Attractions`;
+
+    const metaDescription =
+      lang === 'fa'
+        ? `راهنمای کامل سفر به ${cityName}، ${countryName}؛ معرفی جاهای دیدنی، جاذبه‌های گردشگری، رستوران‌ها، محله‌ها، بهترین زمان سفر و نکات مهم برای سفر به ${cityName}.`
+        : `Complete ${cityName} travel guide: discover the best things to do, top attractions, restaurants, neighborhoods, best time to visit and useful travel tips.`;
+
+    const canonicalUrl =
+      `https://koja-baram.jfry4807.workers.dev/${city.countrySlug}/${city.slug}`;
+
+    document.title = title;
+
+    const setMeta = (name: string, content: string) => {
+      let meta = document.querySelector(
+        `meta[name="${name}"]`
+      ) as HTMLMetaElement | null;
+
+      if (!meta) {
+        meta = document.createElement('meta');
+        meta.setAttribute('name', name);
+        document.head.appendChild(meta);
+      }
+
+      meta.setAttribute('content', content);
+    };
+
+    const setProperty = (property: string, content: string) => {
+      let meta = document.querySelector(
+        `meta[property="${property}"]`
+      ) as HTMLMetaElement | null;
+
+      if (!meta) {
+        meta = document.createElement('meta');
+        meta.setAttribute('property', property);
+        document.head.appendChild(meta);
+      }
+
+      meta.setAttribute('content', content);
+    };
+
+    setMeta('description', metaDescription);
+    setMeta('robots', 'index, follow');
+
+    setProperty('og:type', 'website');
+    setProperty('og:title', title);
+    setProperty('og:description', metaDescription);
+    setProperty('og:url', canonicalUrl);
+    setProperty('og:locale', lang === 'fa' ? 'fa_IR' : 'en_US');
+
+    let canonical = document.querySelector(
+      'link[rel="canonical"]'
+    ) as HTMLLinkElement | null;
+
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonical);
+    }
+
+    canonical.href = canonicalUrl;
+  }, [city, countrySlug, lang]);
+
   if (!city || city.countrySlug !== countrySlug) {
     return (
       <div className="max-w-2xl mx-auto px-6 py-32 text-center">
@@ -53,69 +129,6 @@ export default function CityPage() {
   const desc = lang === 'fa' ? city.descriptionFa : city.description;
   const tagline = lang === 'fa' ? city.taglineFa : city.tagline;
 
-  /*
-   * Dynamic SEO
-   * Each city gets its own title, description, Open Graph data
-   * and canonical URL.
-   */
-  useEffect(() => {
-    const cityName = lang === 'fa' ? city.nameFa : city.name;
-    const countryName = lang === 'fa' ? city.countryFa : city.country;
-
-    const title = `${cityName} | راهنمای سفر، جاذبه‌ها و دیدنی‌های ${cityName}`;
-
-    const metaDescription = `راهنمای سفر به ${cityName}، ${countryName}؛ معرفی جاذبه‌های گردشگری، رستوران‌ها، محله‌ها و نکات مهم سفر.`;
-
-    const canonicalUrl = `https://koja-baram.jfry4807.workers.dev/${city.countrySlug}/${city.slug}`;
-
-    document.title = title;
-
-    const setMeta = (name: string, content: string) => {
-      let meta = document.querySelector(`meta[name="${name}"]`);
-
-      if (!meta) {
-        meta = document.createElement('meta');
-        meta.setAttribute('name', name);
-        document.head.appendChild(meta);
-      }
-
-      meta.setAttribute('content', content);
-    };
-
-    const setProperty = (property: string, content: string) => {
-      let meta = document.querySelector(`meta[property="${property}"]`);
-
-      if (!meta) {
-        meta = document.createElement('meta');
-        meta.setAttribute('property', property);
-        document.head.appendChild(meta);
-      }
-
-      meta.setAttribute('content', content);
-    };
-
-    setMeta('description', metaDescription);
-    setMeta('robots', 'index, follow');
-
-    setProperty('og:type', 'website');
-    setProperty('og:title', title);
-    setProperty('og:description', metaDescription);
-    setProperty('og:url', canonicalUrl);
-    setProperty('og:locale', lang === 'fa' ? 'fa_IR' : 'en_US');
-
-    let canonical = document.querySelector(
-      'link[rel="canonical"]'
-    ) as HTMLLinkElement | null;
-
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonical);
-    }
-
-    canonical.href = canonicalUrl;
-  }, [city, lang]);
-
   const tabLabels: Record<string, string> = {
     overview: t.overview,
     attractions: t.attractions,
@@ -130,7 +143,11 @@ export default function CityPage() {
       <div className="relative h-[520px] bg-[#1D2E44] overflow-hidden">
         <img
           src={city.heroImage}
-          alt={name}
+          alt={
+            lang === 'fa'
+              ? `${name} - جاهای دیدنی و راهنمای سفر`
+              : `${name} - travel guide and attractions`
+          }
           className="w-full h-full object-cover saturate-90 brightness-60"
         />
 
@@ -269,7 +286,9 @@ export default function CityPage() {
             <div className="lg:col-span-2 space-y-8">
               <div>
                 <h2 className="font-serif text-[#1A1A18] font-bold text-2xl mb-4">
-                  {t.overview}
+                  {lang === 'fa'
+                    ? `راهنمای سفر به ${name}`
+                    : `${name} Travel Guide`}
                 </h2>
 
                 <p className="text-[#3A3A38] leading-relaxed text-base">
@@ -280,7 +299,7 @@ export default function CityPage() {
               {/* Gallery */}
               <div>
                 <h3 className="font-mono text-xs text-[#4A6741] uppercase tracking-widest mb-3">
-                  Gallery
+                  {lang === 'fa' ? `تصاویر ${name}` : `${name} Gallery`}
                 </h3>
 
                 <div className="grid grid-cols-3 gap-2">
@@ -297,7 +316,11 @@ export default function CityPage() {
                     >
                       <img
                         src={img}
-                        alt={`${name} gallery ${i + 1}`}
+                        alt={
+                          lang === 'fa'
+                            ? `${name} - تصویر ${i + 1}`
+                            : `${name} travel photo ${i + 1}`
+                        }
                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-500 saturate-90"
                       />
                     </button>
@@ -310,7 +333,11 @@ export default function CityPage() {
                 >
                   <img
                     src={city.galleryImages[galleryIndex]}
-                    alt={`${name} main`}
+                    alt={
+                      lang === 'fa'
+                        ? `${name} - عکس اصلی`
+                        : `${name} main travel photo`
+                    }
                     className="w-full h-64 object-cover saturate-90"
                   />
                 </div>
@@ -342,7 +369,9 @@ export default function CityPage() {
             <div className="space-y-4">
               <div className="field-card p-5">
                 <h3 className="font-mono text-xs text-[#4A6741] uppercase tracking-widest mb-4">
-                  {t.travelInfo}
+                  {lang === 'fa'
+                    ? `اطلاعات سفر به ${name}`
+                    : `${name} Travel Information`}
                 </h3>
 
                 <div className="space-y-3">
@@ -450,7 +479,9 @@ export default function CityPage() {
         {activeTab === 'attractions' && (
           <div>
             <h2 className="font-serif text-[#1A1A18] font-bold text-2xl mb-6">
-              {t.attractions} in {name}
+              {lang === 'fa'
+                ? `جاهای دیدنی و جاذبه‌های گردشگری ${name}`
+                : `Best Things to Do and Attractions in ${name}`}
             </h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -476,7 +507,9 @@ export default function CityPage() {
         {activeTab === 'neighborhoods' && (
           <div>
             <h2 className="font-serif text-[#1A1A18] font-bold text-2xl mb-6">
-              {t.neighborhoods} of {name}
+              {lang === 'fa'
+                ? `محله‌های معروف ${name}`
+                : `Best Neighborhoods in ${name}`}
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -488,7 +521,11 @@ export default function CityPage() {
                   <div className="aspect-[4/3] overflow-hidden bg-[#C8B99A]">
                     <img
                       src={n.imageUrl}
-                      alt={n.name}
+                      alt={
+                        lang === 'fa'
+                          ? `${n.nameFa} - محله ${name}`
+                          : `${n.name} neighborhood in ${name}`
+                      }
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 saturate-90"
                     />
                   </div>
@@ -523,7 +560,9 @@ export default function CityPage() {
         {activeTab === 'restaurants' && (
           <div>
             <h2 className="font-serif text-[#1A1A18] font-bold text-2xl mb-6">
-              {t.restaurants} in {name}
+              {lang === 'fa'
+                ? `رستوران‌های ${name}`
+                : `Best Restaurants in ${name}`}
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -535,7 +574,11 @@ export default function CityPage() {
                   <div className="aspect-[16/9] overflow-hidden bg-[#C8B99A]">
                     <img
                       src={r.imageUrl}
-                      alt={r.name}
+                      alt={
+                        lang === 'fa'
+                          ? `${r.nameFa} - رستوران در ${name}`
+                          : `${r.name} restaurant in ${name}`
+                      }
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 saturate-90"
                     />
                   </div>
@@ -579,7 +622,9 @@ export default function CityPage() {
           <div className="grid md:grid-cols-2 gap-6 max-w-3xl">
             <div className="field-card p-6">
               <h3 className="font-serif text-[#1A1A18] font-bold text-xl mb-4">
-                {t.bestTime}
+                {lang === 'fa'
+                  ? `بهترین زمان سفر به ${name}`
+                  : `Best Time to Visit ${name}`}
               </h3>
 
               <p className="text-[#3A3A38]">
